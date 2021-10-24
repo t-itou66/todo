@@ -83,6 +83,10 @@
         <property name="enableSpringELCompiler" value="true" />
         <property name="templateResolver" ref="templateResolver" />
     </bean>
+    <bean id="beanNameViewResolver"
+           class="org.springframework.web.servlet.view.BeanNameViewResolver">
+        <property name="order" value="1" />
+    </bean>
 
     <bean id="requestDataValueProcessor"
         class="org.terasoluna.gfw.web.mvc.support.CompositeRequestDataValueProcessor">
