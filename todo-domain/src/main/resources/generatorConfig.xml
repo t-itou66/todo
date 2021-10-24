@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <context id="todo" >
+    <jdbcConnection
+        driverClass="org.postgresql.Driver"
+        connectionURL="jdbc:postgresql://localhost:5432/todo"
+        userId="postgres"
+        password="postgres" />
+    <javaModelGenerator
+        targetPackage="com.example.todo.domain.model"
+        targetProject="${mybatis.generate.basedir}\src\main\java\" />
+    <sqlMapGenerator
+        targetPackage="com.example.todo.domain.model"
+        targetProject="${mybatis.generate.basedir}\src\main\java\" />
+    <table schema="public" tableName="todo" ></table>
+  </context>
+</generatorConfiguration>
