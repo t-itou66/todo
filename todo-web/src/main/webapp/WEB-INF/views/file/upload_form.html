@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ファイルアップロード</title>
+<link rel="stylesheet"
+       href="../../../resources/app/css/styles.css"
+       th:href="@{/resources/app/css/styles.css}">
+</head>
+<body>
+    <h1>ファイルアップロード</h1>
+    <div>
+        <form
+          th:action="@{/file-upload/upload}"
+          method="post"
+          enctype="multipart/form-data"
+          th:object="${fileUploadForm}">
+          <input type="file" th:field="*{file}" /><br/>
+          <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>
